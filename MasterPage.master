@@ -1,0 +1,396 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<link href="StyleSheet.css" rel="stylesheet" />
+<link href="dangky.css" rel="stylesheet" />
+<link href="tuvung.css" rel="stylesheet" />
+<link href="Gioithieu.css" rel="stylesheet" />
+<link href="Nguphap.css" rel="stylesheet" />
+<link href="login.css" rel="stylesheet" />
+<script src="js/javascript.js"></script>
+<script src="js/jssor.js"></script>
+<script src="js/jssor.slider.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery-3.2.0.min.js"></script>
+<body id="<%=BodyId %>" >
+    <form id="form1" runat="server">
+    <div>
+
+       <style>
+
+       </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('a.login-window').click(function () {
+                    //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
+                    var loginBox = $(this).attr('href');
+
+                    //cho hiện hộp đăng nhập trong 300ms
+                    $(loginBox).fadeIn(300);
+
+                    // thêm phần tử id="over" vào sau body
+                    $('body').append('<div id="over">');
+                    $('#over').fadeIn(300);
+
+                    return false;
+                });
+
+                // khi click đóng hộp thoại
+                $(document).on('click', "a.close, #over", function () {
+                    $('#over, .login').fadeOut(300, function () {
+                        $('#over').remove();
+                    });
+                    return false;
+                });
+            });
+        </script>
+                <!------------------------------------------ HEADER---------------------------------------->
+                <div class="header">
+                   
+                        <div class="header-top">
+                            <div class="wrapper">
+                                <div class="logo">
+                                     <img src="Images/Logo-TOEIC.jpg">
+                                </div>
+                               
+                             <div class="header-lienhe">
+                                 <div class="sdt-email">
+                                 <h4>Hotline: 01682995769 </h4><h4>   Email: leviethoa1994@gmail.com</h4>
+
+                                 </div>
+                                        <div class="header-search">
+                                            <asp:TextBox ID="txt_timkiem" runat="server" size="30" placeholder="Search..." ></asp:TextBox>
+                                             
+                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"><img src="Images/tải xuống.jpg"/></asp:LinkButton>
+                                         </div>
+                             </div>
+                               
+                                       
+                                        <div class="login" id="login-box">
+                                            <div class="login-header">Log in</div>
+ 
+
+                                 <a class="close" href="#"><img class="img-close" title="Close Window" alt="Close" src="Images/close3.png" /></a>
+                                <form class="login-content" action="#" method="post">
+                                <p><asp:TextBox ID="txt_tendangnhap" runat="server"  placeholder="Username"></asp:TextBox></p>
+                                    <p><asp:TextBox ID="txt_matkhau" runat="server"  placeholder="Password" TextMode="Password"></asp:TextBox></p>
+                                    <table><tr><td width="50"><asp:CheckBox ID="luumatkhau" runat="server" /></td><td><label>Remember Password</label></td>
+                                        <td><a href="Quenmatkhau.aspx" style="text-decoration:none; margin-left: 35px;">Forget Password ?</a></td>
+                                           </tr></table>
+                                    <p>
+                                        <asp:Button ID="btn_dangnhap" runat="server" Text="Log in" OnClick="btn_dangnhap_Click" /></p></form></div>
+                             <div class="header-right">
+                                    <a  id="dangnhap" class="login-window "   runat="server" href="#login-box" style="margin-left:65px"> Sign In </a><a id="dangnhapthanhcong" runat="server" href="#"> Xin chào, <asp:Label ID="lbl_username" runat="server" Text="Label"></asp:Label></a>
+                            |<asp:LinkButton ID="dangxuat" runat="server" OnClick="dangxuat_Click" ForeColor="#0000CC">Sign out</asp:LinkButton><a href="dangky.aspx" id="dangky" runat="server"> Sign Up </a>
+                               
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                  </div>
+
+                        </div>
+                       </div>
+                     <div class="container" id="main" role="main">
+              <div class="wrapper">
+            <ul class="menu">
+                <li class="Home"><a href="Default.aspx" >Home</a></li>
+                  <li class="Gioithieu"><a href="Gioithieu.aspx">Introduce</a>
+                      <ul class="submenu">
+                        <li class="Toeic"><a href="Gioithieu.aspx">Toeic</a></li>
+                        <li class="ThangdiemToeic"><a href="Thangdiem.aspx">Toeic Score</a></li>
+                    
+                       
+                    </ul>
+                  </li>
+                <li class="Thongtin"><a href="Tinmoi.aspx">Toeic Information </a>
+                     <ul class="submenu">
+                        <li class="Tinmoi"><a href="Tinmoi.aspx">News</a></li>
+                        <li class=" Kinhnghiem"><a href="Kinhnghiem.aspx">Experiences</a></li>
+                      
+                       
+                    </ul>
+                </li>
+                <li class="baihoc" ><a>Lesson</a>
+                    <ul class="submenu">
+                        <li class="grammar"><a href="Nguphap.aspx">Grammar</a></li>
+                        <li class="vocabulary"><a href="Tuvung.aspx">Vocabulary</a></li>
+                  
+                       
+                    </ul>
+                </li>
+                <li class="nghe"><a href="#" >Listening</a>
+                    <ul class="submenu">
+                        <li class="photo"><a href="Part1_Photographs.aspx">Photographs</a></li>
+                        <li class="question"><a href="Part2_Question.aspx">Question-Response</a></li>
+                        <li class="conversation"><a href="Part3_Conversation.aspx">Conversations </a></li>
+                        <li class="talk"><a href="Part4_Talk.aspx">Talks </a></li>
+
+                    </ul>
+                </li>
+                <li class="doc"><a href="#">Reading</a>
+                     <ul class="submenu">
+                        <li class="sentences"><a href="Part5_Sentences.aspx">Incomplete Sentences </a></li>
+                        <li class="text"><a href="Part6_Text_Completion.aspx">Text Completion  </a></li>
+                        <li class="single"><a href="Part7_Single_Passage.aspx">Single Passage</a></li>
+                        <li class="double"><a href="Part7_Double_Passage.aspx">Double Passage </a></li>
+                       
+                    
+                    </ul>
+                </li>
+                  <li class="kiemtra"><a href="#" >Test</a>
+                     <ul class="submenu">
+                           <li class="lv0"><a href="dethi0-300.aspx">Level 0 - 300 </a></li>
+                        <li class="lv300"><a href="dethi300-550.aspx">Level 300 - 550 </a></li>
+                        <li class="lv550"><a href="dethi550-880.aspx">Level 550 - 880 </a></li>
+                        <li class="lv880"><a href="dethi880-990.aspx">Level 880 - 990 </a></li>
+                        <li id="dethitonghop" runat="server" class="baitest"><a href="DeThiTongHop.aspx">Practice Test</a></li>
+                    
+                    </ul>
+                </li>
+                 <li><a href="Contact.aspx">contact</a>
+                     
+                    
+                   
+                </li>
+ 
+            </ul>
+                  </div>
+        </div>
+                    <div class="wrapper">
+                    <div class="header-banner">
+                        
+                        <div class="banner">
+                         <p>TOEIC EXAM PREPARATION 
+                        </p><h3>EFFECTION ONLINE</h3>
+                        <button><a href="Dangky.aspx">SIGN UP NOW</a> </button>
+  <div class="slider">
+       <div class="slide_group">
+      
+  <div class="slide_viewer">
+         
+      <div class="slide">
+          <img src="Images/luyen-thi-toeic-on-thi-toeic-hieu-qua-ece.jpg"  />
+      </div>
+     
+ 
+</div><!-- End // .slider -->
+</div>
+</div>
+</div>
+
+
+
+<!-- End // .directional_nav
+<div class="slide_buttons">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>        
+            
+            
+          
+   
+    <script language="javascript">
+        $('.slider').each(function () {
+            var $this = $(this);
+            var $group = $this.find('.slide_group');
+            var $slides = $this.find('.slide');
+            var bulletArray = [];
+            var currentIndex = 0;
+            var timeout;
+
+            function move(newIndex) {
+                var animateLeft, slideLeft;
+
+                advance();
+
+                if ($group.is(':animated') || currentIndex === newIndex) {
+                    return;
+                }
+
+                bulletArray[currentIndex].removeClass('active');
+                bulletArray[newIndex].addClass('active');
+
+                if (newIndex > currentIndex) {
+                    slideLeft = '100%';
+                    animateLeft = '-100%';
+                } else {
+                    slideLeft = '-100%';
+                    animateLeft = '100%';
+                }
+
+                $slides.eq(newIndex).css({
+                    display: 'block',
+                    left: slideLeft
+                });
+                $group.animate({
+                    left: animateLeft
+                }, function () {
+                    $slides.eq(currentIndex).css({
+                        display: 'none'
+                    });
+                    $slides.eq(newIndex).css({
+                        left: 0
+                    });
+                    $group.css({
+                        left: 0
+                    });
+                    currentIndex = newIndex;
+                });
+            }
+
+            function advance() {
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    if (currentIndex < ($slides.length - 1)) {
+                        move(currentIndex + 1);
+                    } else {
+                        move(0);
+                    }
+                }, 4000);
+            }
+
+            $('.next_btn').on('click', function () {
+                if (currentIndex < ($slides.length - 1)) {
+                    move(currentIndex + 1);
+                } else {
+                    move(0);
+                }
+            });
+
+            $('.previous_btn').on('click', function () {
+                if (currentIndex !== 0) {
+                    move(currentIndex - 1);
+                } else {
+                    move(3);
+                }
+            });
+
+            $.each($slides, function (index) {
+                var $button = $('<a class="slide_btn">&bull;</a>');
+
+                if (index === currentIndex) {
+                    $button.addClass('active');
+                }
+                $button.on('click', function () {
+                    move(index);
+                }).appendTo('.slide_buttons');
+                bulletArray.push($button);
+            });
+
+            advance();
+        });
+	</script>
+ </div> --></div>
+
+                        
+                    </div>
+         
+                       
+             </div>
+                   
+                  <!------------------------------------------ CONTENT---------------------------------------->
+                <div class="wrapper">
+                    <div class="content">
+                   <div class="content-left">
+                             
+ 
+        
+       
+
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+
+                   </div>
+                        <div class="content-right">
+                            <a href="#"><img src="Images/button_dk.jpg" /></a>
+                            <div class="lienhetructuyen" id="thanhvien" runat="server" style="text-align:center">
+                           Họ tên: <asp:Label ID="txt_hoten" runat="server"></asp:Label>
+                                <br />
+                                        <a href="Chinhsua_Dangky.aspx">Personal information</a>
+                                <br />
+                                         <a href="Lichsulambai.aspx">Test History</a>
+                           
+                            </div>
+                        
+                            <div class="lienhetructuyen">
+                              <div class="lienhetructuyen-tieude" style="text-align:center">
+                             <img src="Images/1330661232587_yahoo.png" />
+                            <p> Support Online</p>
+
+                              </div>
+                                <div class="hotro">
+                                    <p><img src="Images/icon-viber.png" />01682995769
+
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="topcaonhat">
+                                <div class="topcaonhat-tieude">
+                                <p>Top max score</p>
+                                    
+                                </div>
+                                
+                            <asp:Repeater ID="rpt_diemthi" runat="server">
+                                
+                                <ItemTemplate>
+                                <div class="danhsachcaonhat">
+                                <p style="color:#0026ff; font-size:19px; font-weight:bold;"><%#Eval("Hoten") %></p>
+                                <h3 style="color:#f00; font-size:17px; font-weight:bold;"><%#Eval("Tongdiem") %> </h3>
+                                    <hr />
+                                </div>
+                                </ItemTemplate></asp:Repeater>
+                                
+                            </div>
+                            
+
+                             <div class="topcaonhat">
+                                <div class="topcaonhat-tieude">
+                                <p></p>
+                                    
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                </div>
+                    </div>
+                    
+                  <!------------------------------------------ FOOTER---------------------------------------->
+        <div class="footer">
+        <div class="wrapper">
+                    <div class="footer-left">
+			<p>Copyright by Toeic</p>
+			</div>
+                    <div class="footer-right">
+<p> Thông tin liên hệ:</p>
+<p>Họ tên: Lê Việt Hòa</p>
+<p>Số điện thoại: 01682995769</p>
+<p>Email: leviethoa1994@gmail.com</p>
+			</div>
+            </div>
+                </div>
+    
+
+
+
+
+
+
+
+    </div>
+    </form>
+</body>
+</html>

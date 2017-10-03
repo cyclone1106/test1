@@ -1,0 +1,40 @@
+﻿body {
+}
+.dangky {
+    float:left;
+    width:90%;
+
+}
+.dangky table{
+   background: #f8f8f8;
+    border: 1px solid #6785b7;
+    width: 93%;
+    margin-left: 50px;
+    border-collapse: collapse;
+}
+
+    .dangky table td{
+          border: 1px solid #e7ecec;
+    padding: 5px;
+    height:35px;
+    }
+
+.tieudedangky {
+    text-align:center;
+    font-size:17px;
+    background:#6785b7;
+    color:#fff;
+    font-weight:bold;
+}
+.button_dangky {
+    text-align:center;
+    margin-left:150px;
+}
+.button_dangky input{
+    float: initial;
+    text-align:center;
+    width:100px;
+    height:50px;
+    background:#6785b7;
+    color:#fff;
+}

@@ -1,0 +1,302 @@
+﻿body {
+}
+* {
+    margin:0px auto;
+    padding:0;
+}
+.admin-wrapper {
+    margin:0 auto;
+    padding:0;
+}
+.admin-header {
+    width:100%;
+    height:50px;
+     background: linear-gradient(#54a1ff, #44689a);
+     border-radius:10px;
+}
+
+.admin-header-logo {
+    float:left;
+    width:15%;
+    height:50px;
+}
+
+.admin-header-logo p {
+  font-size: 25px;
+    color: #ffffff;
+    line-height: 50px;
+    font-weight: bold;
+}
+.admin-header-right {
+      float:right;
+    width:85%;
+    height:50px;
+}
+    .admin-header-right p {
+
+           color: #fff;
+    float: right;
+    margin-right: 48px;
+    margin-top: 15px;
+    }
+.admin-content {
+    
+    width:100%;
+    height:auto;
+    background:#f00;
+}
+
+.admin-content-left {
+    float:left;
+    width:12.5%;
+     height:auto;
+
+    border-top-left-radius:15px;
+    background: linear-gradient(#54a1ff, #44689a);
+
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+	margin:0;
+	padding:0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  position: relative;
+  
+}
+#cssmenu {
+  width: 173px;
+  float:left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+}
+#cssmenu a {
+  line-height: 1.3;
+}
+#cssmenu > ul > li:first-child {
+  background: #2c3e50;
+  background: -moz-linear-gradient(#66665e 0%, #45463d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));
+  background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);
+   background: linear-gradient(#54a1ff, #44689a);
+
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+#cssmenu > ul > li:first-child > a {
+  padding: 15px 10px;
+  background: url(images/pattern.png) top left repeat;
+  border: none;
+
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  text-shadow: 0 -1px 1px #000000;
+}
+#cssmenu > ul > li:first-child > a > span {
+  padding: 0;
+}
+#cssmenu > ul > li:first-child:hover {
+  background: #2c3e50;
+  background: -moz-linear-gradient(#66665e 0%, #45463d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));
+  background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);
+  background: linear-gradient(#54a1ff, #44689a);
+}
+#cssmenu > ul > li {
+  background: #2c3e50;
+  background: -moz-linear-gradient(#e94f31 0%, #d13516 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e94f31), color-stop(100%, #d13516));
+  background: -webkit-linear-gradient(#e94f31 0%, #d13516 100%);
+  background: linear-gradient(#54a1ff, #44689a);
+}
+#cssmenu > ul > li:hover {
+  background: #2c3e50;
+  background: -moz-linear-gradient(#e84323 0%, #c33115 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e84323), color-stop(100%, #c33115));
+  background: -webkit-linear-gradient(#e84323 0%, #c33115 100%);
+ background: linear-gradient(#34495e 100%, #FFF 50%);
+}
+#cssmenu > ul > li > a {
+  font-size: 16px;
+  display: block;
+  background: url(images/pattern.png) top left repeat;
+  color: #FFF;
+  border: 1px solid #34495e;
+  border-top: none;
+  
+}
+#cssmenu > ul > li > a > span {
+  display: block;
+  padding: 12px 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#cssmenu > ul > li > a:hover {
+  text-decoration: none;
+}
+#cssmenu > ul > li.active {
+  border-bottom: none;
+}
+#cssmenu > ul > li.has-sub > a span {
+  background: url(/Nhom4/images/icon_plus.png) 96% center no-repeat;
+
+}
+#cssmenu > ul > li.has-sub.active > a span {
+  background: url(/Nhom4/images/icon_minus.png) 96% center no-repeat;
+}
+/* Sub menu */
+#cssmenu ul ul {
+  display: none;
+  background: #03F;
+  border-right: 1px solid #a2a194;
+  border-left: 1px solid #a2a194;
+}
+#cssmenu ul ul li {
+  padding: 0;
+  border-bottom: 1px solid #34495e;
+  border-top: none;
+  background: #2c3e50;
+  background: -moz-linear-gradient(#f7f7f7 0%, #ececec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #ececec));
+  background: -webkit-linear-gradient(#f7f7f7 0%, #ececec 100%);
+  background: linear-gradient(#2c3e50 100%, #2c3e50 100%);
+}
+#cssmenu ul ul li:last-child {
+  border-bottom: none;
+}
+#cssmenu ul ul a {
+  padding: 10px 10px 10px 25px;
+  display: block;
+  color:#FFF;
+  font-size: 16px;
+  font-weight: normal;
+}
+#cssmenu ul ul a:before {
+  content: "»";
+  position: absolute;
+  left: 10px;
+  color: #e94f31;
+}
+#cssmenu ul ul a:hover {
+  color: #e94f31;
+}
+
+.admin-content-right {
+    float:left;
+    width:86%;
+    height:auto;
+    background:#ffffff;
+        border-left: 2px solid #2c3e50;
+}
+.admin_cauhoi {
+    line-height:25px;
+}
+.admin_cauhoi tr{
+    line-height:25px;
+        height: 39px;
+}
+
+.admin-footer {
+    width:100%;
+    height:75px;
+      background: linear-gradient(#54a1ff, #44689a);
+    float:left;
+}
+
+#Trangchu li.Trangchu span, #Gioithieu li.Gioithieu span{
+    color:#f00;
+    font-weight:bold;
+}
+.dscauhoi {
+}
+    .dscauhoi input {
+        width:35px;
+        height:25px;
+        background:#355d79;
+        flex-align:center;
+        color:#fff;
+    }
+    .dscauhoi table {
+        border:1px solid #00a8d8;
+        border-collapse:collapse;
+    }
+    .dscauhoi table th {
+          background: #355d79;
+    color: #FFF;
+    border-color: #FFF;
+    border: 1px solid #ffffff;
+  
+    }
+    .dscauhoi td {
+      border:1px solid #0095ff;
+   
+      
+    }
+      .dscauhoi tr {
+      border:1px solid #0095ff;
+         line-height: 35px;
+   
+      
+    }
+    .dscauhoi table tr:hover {
+        background-color:#597284;
+	color:#FFF;
+    }
+/*================THÊM CÂU HỎI ==========================*/
+.themcauhoi {
+
+}
+    .themcauhoi p {
+            width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background: #0095ff;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    }
+.button input {
+        width: 105px;
+    height: 37px;
+    background: #039007;
+    color: #fff;
+}
+
+.btn_hinhanh {
+    width:55px;
+    height:75px;
+}
+.footer-left{
+	width: 35%;
+	float:left;
+	line-height:100px;
+}
+.footer p{
+	color:#fff;
+	font-size:17px;
+    font-weight:bolder;
+    font-family:"Times New Roman";
+	}
+.footer-right{
+	float:right;
+
+
+}

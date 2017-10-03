@@ -1,0 +1,22 @@
+﻿body {
+}
+.gioithieu table{
+   background: #f8f8f8;
+    border: 1px solid #6785b7;
+    width: 93%;
+ 
+    border-collapse: collapse;
+}
+
+    .gioithieu table td{
+          border: 1px solid #e7ecec;
+    padding: 5px;
+    height:35px;
+    }
+
+       .gioithieu table th{
+           width:70px;
+          border: 1px solid #e7ecec;
+    padding: 5px;
+    height:35px;
+    }

@@ -1,0 +1,120 @@
+﻿body {
+}
+.background-tieude {
+ width:104%;
+    height: 31px;
+    background: #42a8ff;
+    float: left;
+
+    margin-bottom: 25px;
+}
+.tieudenguphap {
+      width: 211px;
+    height: auto;
+    background: #42a8ff;
+    text-align: center;
+    border-bottom-right-radius: 55px;
+    border-top-right-radius: 55px;
+    float:left;
+    border-right: 2px solid #fff;
+}
+    .tieudenguphap p {
+            color: #ffffff;
+    line-height: 31px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+        font-size: 15px;
+    }
+.cautruc{
+    width: 517px;
+    height: auto;
+    border: 1px solid #04782a;
+    background: #eae9e9;
+    text-align: center;
+    margin-left: 109px;
+  
+}
+    .cautruc p{
+           color: #1513bf;
+    font-size: 25px;
+    font-family: 'Times New Roman';
+    line-height: 60px;
+    }
+.vidu {
+    width:100%;
+}
+
+    .vidu p {
+          font-size:19px;
+        color:#091c80;
+        line-height:40px;
+    }
+.giaithich {
+}
+
+    .giaithich p {
+        font-size:19px;
+        color:#091c80;
+        line-height:40px;
+    }
+.duongke-nguphap {
+    width:105%;
+    height:5px;
+    background:#019c12;
+    margin-top:65px;
+}
+.duongke-nguphap2 {
+    width:105%;
+    height:5px;
+    background:#019c12;
+}
+
+/* từ vựng*/
+
+.tieudetuvung {
+      width: 250px;
+    height: auto;
+    background: #42a8ff;
+    text-align: center;
+    border-bottom-right-radius: 55px;
+    border-top-right-radius: 55px;
+    float:left;
+    border-right: 2px solid #fff;
+}
+    .tieudetuvung p {
+            color: #ffffff;
+    line-height: 31px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    }
+
+.tuvungchitiet table{
+      background: #f8f8f8;
+    border: 1px solid #6785b7;
+    width: 100%;
+    margin-left: 0px;
+    border-collapse: collapse;
+}
+
+   .tuvungchitiet table th{
+        height:35px;
+          border: 1px solid #e7ecec;
+    padding: 5px;
+    }
+
+    .tuvungchitiet table td{
+        height:35px;
+          border: 1px solid #e7ecec;
+    padding: 5px;
+    }
+
+     
+
+.tuvung {
+    text-align:center;
+    font-size:17px;
+    background:#6785b7;
+    color:#fff;
+    font-weight:bold;
+}
+
