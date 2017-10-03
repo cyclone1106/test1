@@ -8,13 +8,6 @@
     margin:0 auto;
     padding:0;
 }
-.admin-header {
-    width:100%;
-    height:50px;
-     background: linear-gradient(#54a1ff, #44689a);
-     border-radius:10px;
-}
-
 .admin-header-logo {
     float:left;
     width:15%;
